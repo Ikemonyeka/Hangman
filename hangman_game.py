@@ -52,6 +52,7 @@ def wrong_hangman(mistake):
 
 def check_guess(guess):
     global word_blanks
+    guess = guess.lower()
     if guess in random_entry_details.get("Random Key"):
         for i in range(random_entry_details.get("Letters", 0)):
             if random_entry_details.get("Random Key")[i] == guess:
